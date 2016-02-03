@@ -5,6 +5,25 @@ var divIds = [];
 var matches = 0;
 
 function fillBoard() {
+  var tiles = ["rock","paper","scissors"];
+  var double =[];
+  
+  for(var i=0;i<tiles.length;i++){
+    double.push(tiles[i]);
+    double.push(tiles[i]);
+    
+  }
+  
+  var random =shuffle(double);
+  
+  console.log(random);
+  
+  for (var i = 0; i < 6; i++) {
+   tiles();
+}
+  
+  
+  
   //TODO: randomly assign positions to the tiles on the screen call
   // addTileToBoard here
   // Hint: You can use a forEach or a for loop
@@ -16,7 +35,7 @@ function shuffle(array) {
   var newArray = [];
   var length = array.length;
 
-  for(i = 0; i < length; i++) {
+  for(var i = 0; i < length; i++) {
     var arrLen = array.length;
     var randomPick = Math.floor(Math.random() * arrLen);
     var element = array[randomPick];
